@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>饿了么 商家信息</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="assets/iconfont.css">
+    <link rel="stylesheet" href="../css/businessInfo.css">
+    <!-- 引入axios -->
+    <script src="../JavaScript/axios.min.js"></script>
+    <script src="../JavaScript/config.js"></script>
+    <!-- 引入自定义js -->
+    <script src="../JavaScript/businessInfo.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <!--头部部分 -->
+    <header>
+        <div class="back-btn" onclick="history.back()">
+            <i class="material-symbols-outlined">arrow_back_ios</i>
+        </div>
+        <p>商家信息</p>
+    </header>
+
+    <!--商家logo部分 -->
+    <div class="business-logo">
+        <img src="assets/img/sj01.png">
+    </div>
+    <!--商家信息部分 -->
+    <div class="business-info">
+        <h1>万家饺子（软件园E18店）</h1>
+        <span>&#165;15起送  &#165;3配送</span>
+        <span>各种饺子炒菜</span>
+    </div>
+    
+    <!--食品分类导航部分 -->
+    <div class="food-category">
+        <ul class="category-list">
+            <!-- 分类列表将由JavaScript动态生成 -->
+        </ul>
+    </div>
+    
+    <!--食品列表部分 -->
+    <div class="food-container">
+        <div class="food">
+            <!-- 食品列表将由JavaScript动态生成 -->
+        </div>
+    </div>
+    <!--购物车部分 -->
+    <div class="cart">
+        <div class="cart-left">
+            <div class="cart-left-icon">
+                <i class="i material-symbols:shopping-cart-outline"></i>
+                <div class="cart-quantity">3</div>
+            </div>
+            <div class="cart-left-info">
+                <span>&#165;12.88</span>
+                <span>另需配送费3元</span>
+            </div>
+        </div>
+        <div class="cart-right"><!--需要分两种情况，一次只能显示一种情况 -->
+            <!--不够起送费-->
+            <!--<div class="cart-right-item">&#165;15起送</div>-->
+            <!--够起送费-->
+            <div class="cart-right-item">去结算</div>
+        </div>
+    </div>
+</div>
+
+<!-- 引入公共组件和功能代码 -->
+<script src="../components/footer.js"></script>
+<script>
+    createFooter();
+</script>
+</body>
+</html>

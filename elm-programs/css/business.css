@@ -1,0 +1,120 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 4vw;  /*一行中的一个字是一行的4%的宽度*/
+
+
+}
+
+/***************全部容器部分*****************/
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+/***************全部容器部分*****************/
+.wrapper header{
+    width: 100%;
+    height: 12vw;
+    background-color: #0097FF;
+    color: #ffffff;
+    font-size: 4.8vw;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;/*属性值大的层级高，显示在上面*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*********************底部状态栏部分***************/
+.footer{
+    width: 100%;
+    flex-basis: 5em;/*五个字的高度*/
+    border-top: 1px solid lightgray;/*上边框的宽度和颜色*//**/
+    display: flex;
+    justify-content: space-around;/*主轴方向上的布局方式*/
+    color: grey;
+    align-items: center;
+    background-color: white;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.footer div i{   /*包含关系选择，定义在i这个部分上面*/
+    font-size: 2em;
+    display: block; /*图标单独占一行，单独成一块*/
+}
+.main {
+    flex-grow: 1;/*打开自动增长*/
+}
+/*********************商家列表部分***************/
+.business {
+    width: 100%;
+    margin-top: 12vw;
+    margin-bottom:14vw;
+    list-style: none;
+}
+
+.business li{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.5vw;
+    border-bottom: solid 1px #DDD;
+    user-select: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+.business-img {
+    position: relative;/*相对定位，指定元素距离边框的距离*/
+}
+.business-img img{
+    width: 20vw;
+    height: 20vw;
+}
+
+.business-img-quantity {
+    width: 5vw;
+    height: 5vw;
+    background-color: red;
+    color: #fff;
+    font-size: 3.6vw;
+    border-radius: 2.5vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;/*以父元素作为起点来定位*/
+    right: -1.5vw;
+    top: -1.5vw;
+}
+
+.business-info {
+    margin-left: 3vw;
+    margin-top: 0;
+}
+.business-info h3{
+    font-size: 3.8vw;
+    color: #555;
+    display: flex;
+    margin-top: 0;
+    padding-top: 0;
+}
+.business-info span{
+    font-size: 3vw;
+    color: #888;
+    margin-top: 2vw;
+    display: flex;
+}
+
+.business-info-index {
+    font-size: 3vw;
+    color: #888;
+    margin-top: 2vw;
+}

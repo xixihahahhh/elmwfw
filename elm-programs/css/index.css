@@ -1,0 +1,342 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 4vw;  /*一行中的一个字是一行的4%的宽度*/
+
+
+}
+
+/***************全部容器部分*****************/
+.wrapper {
+    display: flex;/*弹性布局*/
+    /*justify-content: center;/*主轴上的对齐方式*/
+    flex-direction: column; /*垂直排布*/
+    height: 100vh;/*高度占比100%*/
+}
+
+/*********************底部状态栏部分***************/
+.footer{
+    width: 100%;
+    flex-basis: 5em;/*五个字的高度*/
+    border-top: 1px solid lightgray;/*上边框的宽度和颜色*//**/
+    display: flex;
+    justify-content: space-around;/*主轴方向上的布局方式*/
+    color: grey;
+    align-items: center;
+    background-color: white;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.footer div i{   /*包含关系选择，定义在i这个部分上面*/
+    font-size: 2em;
+    display: block; /*图标单独占一行，单独成一块*/
+}
+.main {
+    flex-grow: 1;/*打开自动增长*/
+    margin-bottom: 5em; /* 为底部导航栏留出空间 */
+}
+
+/******************顶部搜索栏部分******************/
+.top{
+    background-color: dodgerblue;
+}
+.location {
+    color: white;
+    padding: 0.5em;
+}
+.location i{
+    font-size: 1.2em;
+    vertical-align: -0.15em;
+}
+.search-text {  /*搜索框内的字*/
+    background-color: #fff;
+    color: #bdbdbd;
+    margin: 0 1em;
+    font-size: 0.9em;
+    line-height: 2em;
+    text-align: center;
+    border-radius:0.2em;
+}
+.search{
+    width: 100%;
+    background-color: dodgerblue;
+    padding-bottom: 0.5em;/*使得滑动固定时和上下都有间隔*/
+    padding-top: 0.5em;
+}
+/**********************分类查找部分*****************/
+.food-category {
+    display: flex;
+    justify-content: space-around;/*水平方向对齐*/
+    flex-wrap: wrap;
+    color: grey;
+    margin: 1em;
+    font-size: 0.9em;
+    align-content: space-between;
+}
+.category-item {
+    flex-basis: 5em;/*间隔距离为五个字*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;/*字和图片垂直分布*/
+
+    user-select: none;/*使得文字不能被选中，而是跳转状态*/
+    cursor: pointer;
+}
+.category-item img{
+    width: 4em;
+    height: 4em;
+}
+/**********************横幅广告部分****************/
+.banner {
+    width: 95%;
+    margin: 0 auto;
+    height: 29vw;
+
+    background-image: url(./assets/img/index_banner.png);/*在同一个文件夹中使用./来表示*/
+
+    background-repeat: no-repeat;/*让背景图片自适应*/
+    background-size: cover;
+
+    box-sizing: border-box;/*设置内边距*/
+    padding:2vw 6vw;/*上下间隔 左右间隔*/
+}
+.banner h3{
+    font-size: 4.2vw;
+    margin-bottom: 1.2vw;
+    margin-top: 0;
+}
+.banner p{
+    font-size: 3.4vw;
+    color: grey;
+    margin-bottom: 2.4vw;
+    margin-top: 0;
+}
+.banner a{
+    font-size: 3vw;
+    color: #C79060;
+    font-weight: 700;
+    user-select: none;/*使得文字不能被选中，而是跳转状态*/
+    cursor: pointer;
+}
+/**********************超级会员部分****************/  /**/
+.supermember {
+    width: 95%;
+    margin: 0 auto;
+    height: 11.5vw;
+    background-color: #FEEDC1;
+    margin-top: 1.3vw;
+    border-radius: 2px;
+    color: #644F1B;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    margin-left: 4vw;
+    user-select: none;
+}
+.left img{
+    width: 6vw;
+    height: 6vw;
+    margin-right: 2vw;
+}
+.left h3{
+    font-size: 4vw;
+    margin-right: 2vw;
+}
+.left p{
+    font-size: 3vw;
+}
+
+.right {
+    font-size: 3vw;
+    margin-right: 4vw;
+    cursor: pointer;
+}
+/**********************推荐商家部分****************/  /**/
+.recommend {
+    width: 100%;
+    height: 14vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recommend_line {
+    width: 6vw;
+    height: 0.2vw;
+    background-color: grey;
+}
+.recommend p{
+    font-size: 4vw;
+    margin: 0 4vw;
+}
+/**********************推荐方式部分****************/  /**/
+.recommendtype {
+    width: 100%;
+    height: 5vw;
+    margin-bottom: 5vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+.recommendtype p{
+    font-size: 3.5vw;
+    color: #555;
+}
+/**********************推荐商家列表部分****************/  /**/
+.bussiness {
+    width: 100%;
+    list-style-type: none;
+}
+.bussiness li{
+    width: 100%;
+    box-sizing: border-box;/*设置一个边框盒子*/
+    padding: 2.5vw;
+    user-select: none;
+    list-style-type: none;
+    border-bottom: solid 1px #DDD;
+
+    display: flex;
+}
+.bussiness li img{
+    width: 18vw;
+    height: 18vw;
+}
+
+.bussiness-info {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 3vw;
+}
+.bussiness-info .bussiness-info-h{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bussiness-info .bussiness-info-h h3{
+    font-size: 4vw;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.bussiness-info-like {
+    width: 1.6vw;
+    height: 3.4vw;
+    background-color: #666;
+    color: white;
+    font-size: 4vw;
+
+
+    display: flex;/*使圆点居中*/
+    justify-content: center;
+    align-items: center;
+}
+
+.bussiness-info-star {
+    display: flex;
+    justify-content: space-between;/*水平方向两侧分布*/
+    align-items: center;
+    margin-top: 2vw;
+    font-size: 3.1vw;
+}
+
+.bussiness-info-star-left {
+    display: flex;
+    align-items: center;
+}
+.material-symbols-light\:kid-star {
+    color: #FEC80E;
+    margin-right: 0.5vw;
+}
+.bussiness-info-star span{
+    color: #666;
+    margin-left: 1vw;
+}
+
+.bussiness-info-star-right {
+    background-color: #0097FF;
+    color: #fff;
+    font-size: 2.4vw;
+    border-radius: 2px;
+    padding: 0 0.6vw;/*尺寸由字体大小决定，不用边框盒子*/
+}
+
+.bussiness-info-delivery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+    color: #666;
+    font-size: 3.1vw;
+}
+
+.bussiness-info-explain {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vw;
+}
+.bussiness-info-explain div{
+    border: solid 1px #DDD;
+    font-size: 2.8vw;
+    color: #666;
+    border-radius: 3px;
+    padding: 0 0.1vw;
+}
+
+.bussiness-info-promotion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8vw;
+}
+
+.bussiness-info-promotion-left {
+    display: flex;
+    align-items: center;
+}
+
+.bussiness-info-promotion-left-incon {
+    width: 4vw;
+    height: 4vw;
+    background-color: #70BC46;
+    font-size: 3vw;
+    color: #fff;
+    border-radius: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bussiness-info-promotion-left span{
+    color: #666;
+    font-size: 3vw;
+    margin-left: 2vw;
+}
+
+.bussiness-info-promotion-right {
+    display: flex;
+    align-items: center;
+    font-size: 2.5vw;
+    color: #999;
+}
+.bussiness-info-promotion-right span{
+    margin-right: 2vw;
+    font-size: 2.8vw;
+}
+.last{
+    margin-bottom: 14vw;
+}
+

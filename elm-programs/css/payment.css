@@ -1,0 +1,152 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 4vw;  /*一行中的一个字是一行的4%的宽度*/
+
+
+}
+
+/***************全部容器部分*****************/
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+/***************全部容器部分*****************/
+.wrapper header{
+    width: 100%;
+    height: 12vw;
+    background-color: #0097FF;
+    color: #ffffff;
+    font-size: 4.8vw;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;/*属性值大的层级高，显示在上面*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper header i {
+    position: absolute;
+    left: 4vw;
+    font-size: 4vw;
+    cursor: pointer;
+}
+/*********************底部状态栏部分***************/
+.footer{
+    width: 100%;
+    flex-basis: 5em;/*五个字的高度*/
+    border-top: 1px solid lightgray;/*上边框的宽度和颜色*//**/
+    display: flex;
+    justify-content: space-around;/*主轴方向上的布局方式*/
+    color: grey;
+    align-items: center;
+    background-color: white;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.footer div i{   /*包含关系选择，定义在i这个部分上面*/
+    font-size: 2em;
+    display: block; /*图标单独占一行，单独成一块*/
+}
+.main {
+    flex-grow: 1;/*打开自动增长*/
+}
+/***************订单信息部分*****************/
+.wrapper h3{
+    margin-top: 12vw;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    padding: 4vw 4vw 0;/*上 左右 下*/
+
+    font-size: 4vw;
+    font-weight: 400;
+    color: #999;
+}
+.order-info-pay {
+    box-sizing: border-box;
+    padding: 4vw;
+    font-size: 4vw;
+    color: #666;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order-info-pay span:last-child{
+    color: orangered;
+}
+/***************订单明细部分*****************/
+.order-detailed-pay {
+    width: 100%;
+    list-style: none;
+}
+.order-detailed-pay li{
+    box-sizing: border-box;
+    padding: 1vw 4vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order-detailed-pay li span{
+    font-size: 3vw;
+    color: #666;
+}
+/***************支付方式部分*****************/
+.payment-type {
+    width: 100%;
+    list-style: none;
+}
+.payment-type li{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.payment-type li img{
+    width: 33vw;
+    height: 8.9vw;
+}
+.material-symbols\:check-circle-rounded{
+    font-size: 5vw;
+    color: #38CA73;
+}
+.payment-button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4vw;
+}
+.payment-button button{
+    width: 100%;
+    height: 10vw;
+    border: none;/*普通边框*/
+    outline: none;/*只有获得焦点时才出现的外轮廓线*/
+    border-radius: 4px;
+    background-color: #38CA73;
+    color: #fff;
+    font-size: 4vw;
+}
+.back-btn {
+    position: absolute;
+    left: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 100%;
+    cursor: pointer;
+}
+
+.back-btn i {
+    font-size: 5vw;
+    font-weight: bold;
+}

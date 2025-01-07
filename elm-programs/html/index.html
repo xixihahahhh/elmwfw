@@ -1,0 +1,122 @@
+<!doctype html><!-- -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>饿了么 首页</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="assets/iconfont.css">
+    <!-- 引入axios -->
+    <script src="../JavaScript/axios.min.js"></script>
+    <script src="../JavaScript/config.js"></script>
+    <!-- 引入自定义js -->
+    <script src="../JavaScript/index.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <main class="main">
+        <!--搜索栏部分 -->
+        <div class="top" ><!--顶上的蓝色部分 -->
+            <div class="location">
+                <i class="i material-symbols:location-on-outline"></i>  <!-- -->
+                <span>云南大学呈贡校区</span>
+                <i class="i material-symbols:arrow-drop-down"></i>
+            </div>
+        </div>
+        <div class="search" id="fixedBox">  <!--和整个蓝色框独立，以便后期滑动时固定 -->
+            <div class="search-text">
+                <i class="i material-symbols:search"></i>
+                <span>搜索饿了么商家、商品名称</span>
+            </div>
+        </div>
+        <!--点餐分类部分 -->
+        <div class="food-category" onclick="location.href='business_list.html'">
+            <div class="category-item" onclick="location.href='business_list.html'">
+                <img src="assets/img/dcfl01.png"/>
+                <span>美食</span>
+            </div>
+            <div class="category-item" onclick="location.href='/business_list/business_list.html'">
+                <img src="assets/img/dcfl02.png"/>
+                <span>早餐</span>
+            </div>
+            <div class="category-item" onclick="location.href='business_list.html'">
+                <img src="assets/img/dcfl03.png"/>
+                <span>跑腿代购</span>
+            </div>
+            <div class="category-item" onclick="location.href='business_list.html'">
+                <img src="assets/img/dcfl04.png"/>
+                <span>汉堡披萨</span>
+            </div>
+            <div class="category-item" onclick="location.href='business_list.html'">
+                <img src="assets/img/dcfl05.png"/>
+                <span>甜品饮品</span>
+            </div>
+            <div class="category-item" onclick="location.href='business_list.html'">
+                <img src="assets/img/dcfl06.png"/>
+                <span>速食简餐</span>
+            </div>
+            <div class="category-item" onclick="location.href='business_list.html'">
+                <img src="assets/img/dcfl07.png"/>
+                <span>地方小吃</span>
+            </div>
+            <div class="category-item" onclick="location.href='business_list.html'">
+                <img src="assets/img/dcfl08.png"/>
+                <span>米粉面馆</span>
+            </div>
+            <div class="category-item" onclick="location.href='business_list.html'">
+                <img src="assets/img/dcfl09.png"/>
+                <span>包子粥铺</span>
+            </div>
+            <div class="category-item" onclick="location.href='business_list.html'">
+                <img src="assets/img/dcfl10.png"/>
+                <span>炸鸡炸串</span>
+            </div>
+
+        </div>
+        <!--横幅广告部分 -->
+        <div class="banner">
+            <h3>品质套餐</h3>
+            <p>搭配齐全吃得好</p>
+            <a>立即抢购 &gt;</a>
+        </div>
+        <!--超级会员部分 -->
+        <div class="supermember">
+            <div class="left">
+                <img src="assets/img/super_member.png"/>
+                <h3>超级会员</h3>
+                <p>&#8226; 每月享超值权益</p>
+            </div>
+            <div class="right">
+                立即开通 &gt;
+            </div>
+        </div>
+        <!--推荐商家部分 -->
+        <div class="recommend">
+            <div class="recommend_line"></div>
+            <p>推荐商家</p>
+            <div class="recommend_line"></div>
+        </div>
+        <!--推荐方式部分 -->
+        <div class="recommendtype">
+            <p>综合排序<i class="i material-symbols:arrow-drop-down"></i></p>
+            <p>距离最近</p>
+            <p>销量最高</p>
+            <p>筛选<i class="i material-symbols:arrow-drop-down"></i></p>
+        </div>
+        <!--推荐商家列表部分 -->
+        <div class="bussiness">
+            <!-- 商家列表将由JavaScript动态生成 -->
+        </div>
+    </main>
+</div>
+
+<!-- 引入公共组件和功能代码 -->
+<script src="../components/footer.js"></script>
+<script>
+    createFooter();
+</script>
+
+</body>
+</html>

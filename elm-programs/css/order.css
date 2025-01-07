@@ -1,0 +1,181 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 4vw;  /*一行中的一个字是一行的4%的宽度*/
+
+
+}
+
+/***************全部容器部分*****************/
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+/***************全部容器部分*****************/
+.wrapper header{
+    width: 100%;
+    height: 12vw;
+    background-color: #0097FF;
+    color: #ffffff;
+    font-size: 4.8vw;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;/*属性值大的层级高，显示在上面*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper header i {
+    position: absolute;
+    left: 4vw;
+    font-size: 4vw;
+    cursor: pointer;
+}
+/***************订单信息部分*****************/
+.order-info {
+    width: 100%;
+    margin-top: 5vw;
+    background-color: #0097EF;
+    box-sizing: border-box;
+    padding: 2vw;
+    color: #fff;
+}
+.order-info h5{
+    font-size: 3vw;
+    font-weight: 300;
+
+    display: flex;
+    margin-bottom: 0;
+}
+.order-info span{
+    font-size: 3vw;
+}
+.order-info-address {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 700;
+    user-select: none;
+    cursor: pointer;
+    margin: 1vw 0;
+}
+.order-info-address span{
+    font-size: 5vw;
+}
+.material-symbols\:arrow-forward-ios{
+    font-size: 6vw;
+}
+.wrapper h3{
+    box-sizing: border-box;
+    padding: 3vw;
+    font-size: 4vw;
+    color: #666;
+    border-bottom: solid 1px #DDD;
+
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/***************订单明细部分*****************/
+.order-detailed {
+    width: 100%;
+}
+.order-detailed li{
+    width: 100%;
+    height: 16vw;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 3vw;
+    color: #666;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order-detailed-left {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+.order-detailed-left img{
+    width: 10vw;
+    height: 10vw;
+}
+.order-detailed-left span{
+    font-size: 3.5vw;
+    margin-left: 3vw;
+}
+.order-detailed li span{
+    font-size: 3.5vw;
+}
+.order-deliveryFee {
+    width: 100%;
+    height: 16vw;
+    box-sizing: border-box;
+    padding: 3vw;
+    color: #666;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3.5vw;
+    margin-top: 0;
+}
+/***************订单合计部分*****************/
+.total {
+    width: 100%;
+    height: 14vw;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+}
+.total-left {
+    flex: 2;
+    background-color: #505051;
+    color: #fff;
+    font-size: 4.5vw;
+    font-weight: 700;
+    user-select: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total-right {
+    flex: 1;
+    background-color: #38CA73;
+    color: #fff;
+    font-size: 4.5vw;
+    font-weight: 700;
+    user-select: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-btn {
+    position: absolute;
+    left: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 100%;
+    cursor: pointer;
+}
+
+.back-btn i {
+    font-size: 5vw;
+    font-weight: bold;
+}

@@ -1,0 +1,423 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-size: 4vw;  /*一行中的一个字是一行的4%的宽度*/
+
+
+}
+
+/***************全部容器部分*****************/
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+/***************全部容器部分*****************/
+.wrapper header{
+    width: 100%;
+    height: 12vw;
+    background-color: #0097FF;
+    color: #ffffff;
+    font-size: 4.8vw;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;/*属性值大的层级高，显示在上面*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper header i {
+    position: absolute;
+    left: 4vw;
+    font-size: 4vw;
+    cursor: pointer;
+}
+
+.back-btn {
+    position: absolute;
+    left: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 100%;
+    cursor: pointer;
+}
+
+.back-btn i {
+    font-size: 5vw;
+    font-weight: bold;
+}
+/***************商家logo部分*****************/
+.business-logo {
+    width: 100%;
+    height: 30vw;
+    margin-top: 12vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+    padding-top: 2.5vw;
+}
+.business-logo img{
+    width: 40vw;
+    height: 30vw;
+    border-radius: 5px;
+}
+/***************商家信息部分*****************/
+.business-info{
+    width: 100%;
+    height: 20vw;
+
+    display: flex;
+    flex-direction: column;/*纵向排列*/
+    justify-content: center;
+    align-items: center;
+}
+.business-info h1{
+    font-size: 5vw;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.business-info span{
+    font-size: 3vw;
+    color: #666;
+    margin-top: 1vw;
+    display: flex;
+}
+/***************食品列表部分*****************/
+.food {
+    width: 100%;
+    list-style: none;
+    margin-bottom: 14vw;
+    padding: 0;
+}
+.food li {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.5vw;
+    user-select: none;
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.food li:hover {
+    background-color: #f9f9f9;
+}
+.no-food {
+    text-align: center;
+    color: #999;
+    padding: 20vw 0;
+    font-size: 3.8vw;
+}
+.food-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.food-left img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 2vw;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.food-left img:hover {
+    transform: scale(1.05);
+}
+.food-left-info {
+    margin-left: 3vw;
+    flex: 1;
+}
+.food-left-info h3 {
+    font-size: 3.8vw;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.food-left-info span {
+    font-size: 3vw;
+    color: #666;
+    display: block;
+    margin-top: 1vw;
+}
+.food-price {
+    color: #f60 !important;
+    font-weight: bold;
+    font-size: 3.5vw !important;
+}
+.food-right {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+.mdi\:minus-circle-outline{
+    font-size: 5.5vw;
+    color: #999;
+    cursor: pointer;
+}
+.food-right span{
+    font-size: 3.6vw;
+    color: #333;
+}
+.material-symbols\:add-circle-outline{
+    font-size: 5.5vw;
+    color: #0097FF;
+    cursor: pointer;
+}
+.minus-btn, .add-btn {
+    width: 6vw;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.minus-btn:active, .add-btn:active {
+    transform: scale(0.9);
+}
+.food-right p {
+    width: 6vw;
+    text-align: center;
+    margin: 0;
+    font-size: 3.6vw;
+    color: #333;
+}
+/***************购物车部分一*****************/
+.cart {
+    width: 100%;
+    height: 14vw;
+    position: fixed;
+    left: 0;
+    bottom: 50px;
+    display: flex;
+    z-index: 999;
+}
+
+.cart-left {
+    flex: 2;/***************占两份*****************/
+    background-color:#505051;
+    display: flex;
+}
+.cart-left-icon {
+    width: 16vw;
+    height: 16vw;
+    box-sizing: border-box;
+    border: solid 1.6vw #444;
+    border-radius: 8vw;
+    background-color: #3190E8;
+    font-size: 7vw;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: -4vw;
+    margin-left: 3vw;
+
+    position: relative;
+}
+.cart-quantity {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 2.5vw;
+    background-color: red;
+    color: #fff;
+    font-size: 3.6vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: -1.5vw;
+    top: -1.5vw;
+}
+.cart-left-info span:first-child{
+    font-size: 4.5vw;
+    color: #fff;
+    margin-top: 1vw;
+
+    display: flex;
+}
+.cart-left-info span:last-child{
+    font-size: 2.8vw;
+    color: #AAA;
+    margin-top: 0;
+
+    display: flex;
+}
+.cart-right {
+    flex: 1;/***************占一份****************/
+    background-color: #38CA73;
+}
+/***************不够起送费时的样式****************/
+/*
+.cart-right-item{
+    width: 100%;
+    height: 100%;
+    background-color: #535356;
+    color: #fff;
+    font-size: 4.5vw;
+    font-weight: 700;
+    user-select: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+/***************达到起送费时的样式****************/
+
+.cart-right-item {
+    width: 100%;
+    height: 100%;
+    background-color: #38CA73;
+    color: #fff;
+    font-size: 4.5vw;
+    font-weight: 700;
+    user-select: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***************食品分类导航部分*****************/
+.food-category {
+    width: 100%;
+    height: 10vw;
+    border-bottom: solid 1px #DDD;
+    position: sticky;
+    top: 12vw;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.category-list {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.category-list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.category-list li {
+    padding: 0 4vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 3.8vw;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.category-list li.active {
+    color: #0097FF;
+    font-weight: bold;
+}
+
+.category-list li.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 2px;
+    background-color: #0097FF;
+    transition: width 0.3s ease;
+}
+
+.category-icon {
+    width: 5vw;
+    height: 5vw;
+    margin-right: 1vw;
+    object-fit: cover;
+}
+
+/***************加载状态部分*****************/
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.loading-spinner {
+    width: 10vw;
+    height: 10vw;
+    border: 0.8vw solid #f3f3f3;
+    border-top: 0.8vw solid #0097FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+    margin-top: 2vw;
+    color: #666;
+    font-size: 3.8vw;
+}
+
+/***************错误提示部分*****************/
+.error-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 3vw 5vw;
+    border-radius: 1vw;
+    font-size: 3.8vw;
+    z-index: 2001;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+    10% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    90% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+}
+
+/***************食品列表容器部分*****************/
+.food-container {
+    width: 100%;
+    margin-bottom: 14vw;
+}

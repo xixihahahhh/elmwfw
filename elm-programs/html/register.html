@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>饿了么 用户注册页面</title>
+    <link rel="stylesheet" href="assets/iconfont.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <div class="wrapper">
+    <!--头部部分 -->        <!-- -->
+    <header>
+            <p>用户注册</p>
+    </header>
+
+    <!--表单部分-->
+    <div class="form-box">
+        <li>
+            <div class="title">
+                账号：
+            </div>
+            <div class="content">
+                <input type="text" placeholder="请输入账号">
+            </div>
+        </li>
+        <li>
+            <div class="title">
+                输入密码：
+            </div>
+            <div class="content">
+                <input type="password" placeholder="输入密码">
+            </div>
+        </li>
+        <li>
+            <div class="title">
+                确认密码：
+            </div>
+            <div class="content">
+                <input type="password" placeholder="确认密码">
+            </div>
+        </li>
+        <li>
+            <div class="title">
+                性别：
+            </div>
+            <div class="content" style="font-size: 3vw;">
+                <input type="radio" name="sex" style="width: 6vw;height: 3.2vw;">男
+                <input type="radio" name="sex" checked style="width: 6vw;height: 3.2vw;">女
+            </div>
+        </li>
+    </div>
+
+    <div class="button-login">
+        <button onclick="location.href='login.html'">注册</button>
+    </div>
+</div>
+
+<!-- 引入公共组件和功能代码 -->
+<script src="../JavaScript/axios.min.js"></script>
+<script src="../JavaScript/config.js"></script>
+<script src="../components/footer.js"></script>
+<script src="../JavaScript/register.js"></script>
+<script>
+    // 创建底部导航栏并设置当前页面高亮
+    createFooter();
+    setActiveNav('user');
+</script>
+</body>
+</html>
