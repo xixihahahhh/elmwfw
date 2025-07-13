@@ -1,0 +1,26 @@
+version: '3'
+services:
+  eureka1:
+    build: .
+    container_name: eureka1
+    hostname: eureka1
+    ports:
+      - "8761:8761"
+    environment:
+      - PROFILE=peer1
+  eureka2:
+    build: .
+    container_name: eureka2
+    hostname: eureka2
+    ports:
+      - "8762:8762"
+    environment:
+      - PROFILE=peer2
+  eureka3:
+    build: .
+    container_name: eureka3
+    hostname: eureka3
+    ports:
+      - "8763:8763"
+    environment:
+      - PROFILE=peer3 
